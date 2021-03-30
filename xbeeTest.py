@@ -1,8 +1,11 @@
 from digi.xbee.devices import XBeeDevice
 
-device = XBeeDevice("/dev/ttyUSB0",9600)
+device = DigiMeshDevice("/dev/ttyUSB0",9600)
 print("did it")
 device.open()
-print("second")
+print("message")
+device.refresh_device_info()
+
 device.close()
+
 
